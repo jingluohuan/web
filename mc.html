@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MC 服务器 - 牢仔科技</title>
+<meta name="description" content="小辉博客 Minecraft Java 服务器，一个属于玩家的自由世界">
+<link rel="icon" href="assets/icon/icon.png" type="image/png">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/mcserver.css">
+</head>
+<body class="mc-page">
+
+<!-- 导航栏（与全站一致） -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">ITlaozai<span>MC</span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="download.html">下载</a></li>
+      <li><a href="seewo.html">希沃</a></li>     
+      <li><a href="about.html">关于</a></li>
+      <li><a href="contact.html">联系</a></li>
+      <li><a href="mcserver.html" class="active">MC服务器</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" title="切换主题">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <button id="rssBtn" class="icon-btn" title="RSS订阅">📡</button>
+      <button class="hamburger" id="hamburger" aria-label="菜单">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="mc-hero">
+  <div class="mc-float f1"></div>
+  <div class="mc-float f2"></div>
+  <div class="mc-float f3"></div>
+  <div class="mc-container">
+    <div class="mc-badge">
+      <span class="dot"></span>
+      <span>服务器在线运行中</span>
+    </div>
+    <h1>小慧博客 MC 服务器</h1>
+    <p class="subtitle">一个属于玩家的 Minecraft Java 世界 —— 自由建造、和谐社区、长期稳定运营，欢迎加入一起探索！</p>
+
+    <div class="mc-ip-card">
+      <span class="mc-ip-label">主服务器地址</span>
+      <span class="mc-ip-address" id="mcMainIp" title="点击复制">mcbr4.itxiaohui.top</span>
+      <button class="mc-btn mc-btn-primary" onclick="document.getElementById('mcMainIp').click()">📋 复制地址</button>
+    </div>
+
+    <div class="mc-hero-actions">
+      <a href="#mcNodes" class="mc-btn mc-btn-primary">🌐 查看所有节点</a>
+      <a href="#mcGuide" class="mc-btn mc-btn-ghost">📖 加入教程</a>
+    </div>
+  </div>
+</section>
+
+<!-- 服务器状态 -->
+<section class="mc-section" id="mcStatus">
+  <div class="mc-container">
+    <h2 class="mc-section-title">服务器状态</h2>
+    <p class="mc-section-subtitle">实时数据展示，服务器稳定运行中</p>
+
+    <div class="mc-status-grid">
+      <div class="mc-status-card">
+        <div class="mc-status-icon green">🟢</div>
+        <div class="mc-status-value"><span class="online-tag">在线</span></div>
+        <div class="mc-status-label">运行状态</div>
+      </div>
+      <div class="mc-status-card">
+        <div class="mc-status-icon blue">👥</div>
+        <div class="mc-status-value"><span data-target="players">0/50</span></div>
+        <div class="mc-status-label">在线玩家</div>
+      </div>
+      <div class="mc-status-card">
+        <div class="mc-status-icon pink">🎮</div>
+        <div class="mc-status-value">1.21.x</div>
+        <div class="mc-status-label">游戏版本</div>
+      </div>
+      <div class="mc-status-card">
+        <div class="mc-status-icon purple">⏱️</div>
+        <div class="mc-status-value"><span data-target="online">0</span>.</div>
+        <div class="mc-status-label">月度在线率</div>
+      </div>
+    </div>
+
+    <div class="mc-progress">
+      <div class="mc-progress-header">
+        <span>当前负载</span>
+        <span>3/50 人</span>
+      </div>
+      <div class="mc-progress-bar">
+        <div class="mc-progress-fill" id="mcProgressFill"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 接入节点 -->
+<section class="mc-section" id="mcNodes">
+  <div class="mc-container">
+    <h2 class="mc-section-title">多节点接入</h2>
+    <p class="mc-section-subtitle">推荐选择延迟最低的节点加入，点击任意卡片一键复制地址</p>
+
+    <div class="mc-nodes-grid">
+      <div class="mc-node-card primary" data-ip="mcbr3.itxiaohui.top">
+        <span class="mc-node-tag main">推荐</span>
+        <div class="mc-node-name">节点1</div>
+        <div class="mc-node-ip">mcbr3.itxiaohui.top</div>
+        <div class="mc-node-desc">全国 BGP 多线接入，延迟低、稳定性最佳，推荐优先使用</div>
+        <div class="mc-node-hint">🔗 点击复制地址</div>
+      </div>
+
+      <div class="mc-node-card" data-ip="mcbr4.itxiaohui.top">
+        <span class="mc-node-tag backup">推荐</span>
+        <div class="mc-node-name">节点2</div>
+        <div class="mc-node-ip">mcbr4.itxiaohui.top</div>
+        <div class="mc-node-desc">全国 BGP 多线接入，延迟低、稳定性最佳，推荐优先使用</div>
+        <div class="mc-node-hint">🔗 点击复制地址</div>
+      </div>
+
+      <div class="mc-node-card" data-ip="mcbr5.itxiaohui.top">
+        <span class="mc-node-tag edu">推荐</span>
+        <div class="mc-node-name">节点3</div>
+        <div class="mc-node-ip">mcbr5.itxiaohui.top</div>
+        <div class="mc-node-desc">全国 BGP 多线接入，延迟低、稳定性最佳，推荐优先使用</div>
+        <div class="mc-node-hint">🔗 点击复制地址</div>
+      </div>
+
+      <div class="mc-node-card" data-ip="mcbr7.itxiaohui.top">
+        <span class="mc-node-tag frp">推荐</span>
+        <div class="mc-node-name">节点的</div>
+        <div class="mc-node-ip">mcbr7.itxiaohui.top</div>
+        <div class="mc-node-desc">全国 BGP 多线接入，延迟低、稳定性最佳，推荐优先使用</div>
+        <div class="mc-node-hint">🔗 点击复制地址</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 服务器特色 -->
+<section class="mc-section" id="mcFeatures">
+  <div class="mc-container">
+    <h2 class="mc-section-title">服务器特色</h2>
+    <p class="mc-section-subtitle">我们致力于打造一个长期、稳定、友好的 MC 社区</p>
+
+    <div class="mc-feature-grid">
+      <div class="mc-feature-card">
+        <div class="mc-feature-icon p1">🛡️</div>
+        <div class="mc-feature-title">稳定运行</div>
+        <div class="mc-feature-desc">Paper 1.21.8 高版本核心，定时自动备份数据，7×24 小时稳定运营，服务器不轻易清档。</div>
+      </div>
+      <div class="mc-feature-card">
+        <div class="mc-feature-icon p2">🎁</div>
+        <div class="mc-feature-title">丰富内容</div>
+        <div class="mc-feature-desc">基础插件齐备：领地保护、箱子锁、传送、经济系统，加入少量趣味玩法，保留原版生存乐趣。</div>
+      </div>
+      <div class="mc-feature-card">
+        <div class="mc-feature-icon p3">🏠</div>
+        <div class="mc-feature-title">自由创造</div>
+        <div class="mc-feature-desc">生存模式为主，鼓励玩家合作建筑、红石工程。生存资源区定期重置，建筑区永不回档。</div>
+      </div>
+      <div class="mc-feature-card">
+        <div class="mc-feature-icon p4">🤝</div>
+        <div class="mc-feature-title">和谐社区</div>
+        <div class="mc-feature-desc">玩家之间互相尊重，管理员公平处理纠纷，QQ 群内日常交流活跃，新玩家友好欢迎。</div>
+      </div>
+      <div class="mc-feature-card">
+        <div class="mc-feature-icon p5">🎪</div>
+        <div class="mc-feature-title">活动奖励</div>
+        <div class="mc-feature-desc">不定期举办建筑比赛、PVP 竞技、寻宝活动等，获胜玩家可获得游戏内称号、物资奖励。</div>
+      </div>
+      <div class="mc-feature-card">
+        <div class="mc-feature-icon p6">🔄</div>
+        <div class="mc-feature-title">跨版本支持</div>
+        <div class="mc-feature-desc">支持 1.8 ~ 1.21.x 客户端进入（ViaVersion），推荐使用 1.21 最新版本获得完整体验。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 在线玩家预览 -->
+<section class="mc-section">
+  <div class="mc-container">
+    <h2 class="mc-section-title">在线玩家</h2>
+    <p class="mc-section-subtitle">看看现在都有谁在服务器里玩耍</p>
+
+    <div class="mc-players-grid">
+      <div class="mc-player-card"><div class="mc-player-avatar">🧑‍💻</div><div class="mc-player-name">itxiaohui</div><div class="mc-player-status"><span class="online">●</span> 建造中</div></div>
+      <div class="mc-player-card"><div class="mc-player-avatar">🧙</div><div class="mc-player-name">Mo_Ying</div><div class="mc-player-status"><span class="online">●</span> 探险</div></div>
+      <div class="mc-player-card"><div class="mc-player-avatar">🏹</div><div class="mc-player-name">JianBao</div><div class="mc-player-status"><span class="online">●</span> 挖矿</div></div>
+      <div class="mc-player-card"><div class="mc-player-avatar">👷</div><div class="mc-player-name">XiaoBai</div><div class="mc-player-status"><span class="online">●</span> 红石研究</div></div>
+      <div class="mc-player-card"><div class="mc-player-avatar">🧝</div><div class="mc-player-name">YunDuo</div><div class="mc-player-status"><span class="online">●</span> 钓鱼</div></div>
+      <div class="mc-player-card"><div class="mc-player-avatar">🧑‍🎤</div><div class="mc-player-name">DaShu</div><div class="mc-player-status"><span class="online">●</span> 商店交易</div></div>
+      <div class="mc-player-card"><div class="mc-player-avatar">🧑‍🚀</div><div class="mc-player-name">FeiXiang</div><div class="mc-player-status"><span class="online">●</span> 飞行探索</div></div>
+      <div class="mc-player-card"><div class="mc-player-avatar">🧑‍🍳</div><div class="mc-player-name">MeiShi</div><div class="mc-player-status"><span class="online">●</span> 烹饪</div></div>
+      <div class="mc-player-card"><div class="mc-player-avatar">🗡️</div><div class="mc-player-name">YongShi</div><div class="mc-player-status"><span class="online">●</span> 打怪</div></div>
+      <div class="mc-player-card"><div class="mc-player-avatar">🌾</div><div class="mc-player-name">NongFu</div><div class="mc-player-status"><span class="online">●</span> 种植</div></div>
+      <div class="mc-player-card"><div class="mc-player-avatar">🐎</div><div class="mc-player-name">QiShi</div><div class="mc-player-status"><span class="online">●</span> 养马</div></div>
+      <div class="mc-player-card"><div class="mc-player-avatar">⛏️</div><div class="mc-player-name">KuangGong</div><div class="mc-player-status"><span class="online">●</span> 下矿</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 加入教程 -->
+<section class="mc-section" id="mcGuide">
+  <div class="mc-container">
+    <h2 class="mc-section-title">如何加入</h2>
+    <p class="mc-section-subtitle">4 步即可进入服务器，开始你的 MC 之旅</p>
+
+    <div class="mc-steps">
+      <div class="mc-step-card">
+        <div class="mc-step-icon">🎮</div>
+        <div class="mc-step-num">1</div>
+        <div class="mc-step-title">准备游戏</div>
+        <div class="mc-step-desc">安装 Minecraft Java 版（推荐 1.21.x，1.8+ 均可），启动器任意</div>
+      </div>
+      <div class="mc-step-card">
+        <div class="mc-step-icon">➕</div>
+        <div class="mc-step-num">2</div>
+        <div class="mc-step-title">添加多人</div>
+        <div class="mc-step-desc">打开游戏 → 多人游戏 → 添加服务器，服务器名称随意</div>
+      </div>
+      <div class="mc-step-card">
+        <div class="mc-step-icon">📋</div>
+        <div class="mc-step-num">3</div>
+        <div class="mc-step-title">输入地址</div>
+        <div class="mc-step-desc">服务器地址填入 <code>mc4.itxiaohui.top</code>，点击完成</div>
+      </div>
+      <div class="mc-step-card">
+        <div class="mc-step-icon">🚀</div>
+        <div class="mc-step-num">4</div>
+        <div class="mc-step-title">进入游戏</div>
+        <div class="mc-step-desc">双击服务器进入，输入 /register 密码 密码 注册账号即可游玩</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="mc-section">
+  <div class="mc-container">
+    <h2 class="mc-section-title">常见问题</h2>
+    <p class="mc-section-subtitle">新玩家常问的问题，这里都有答案</p>
+
+    <div class="mc-faq">
+      <div class="mc-faq-item">
+        <div class="mc-faq-q">
+          <span style="display:flex;align-items:center;gap:12px;"><span class="q-icon">Q</span>连接不上服务器怎么办？</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="mc-faq-a">
+          ① 请检查游戏版本是否为 Java 版（基岩版/手机版暂时无法直接加入）；② 尝试切换不同节点（主节点/备用/教育网）；③ 检查网络是否正常，是否开启了 VPN/代理；④ 仍无法连接可加入 QQ 群反馈。
+        </div>
+      </div>
+
+      <div class="mc-faq-item">
+        <div class="mc-faq-q">
+          <span style="display:flex;align-items:center;gap:12px;"><span class="q-icon">Q</span>必须是正版账号才能进吗？</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="mc-faq-a">
+          不需要正版账号！服务器支持离线登录（外置登录/皮肤站均可），但请确保用户名不要与他人重复，建议使用外置登录以获得更好体验。
+        </div>
+      </div>
+
+      <div class="mc-faq-item">
+        <div class="mc-faq-q">
+          <span style="display:flex;align-items:center;gap:12px;"><span class="q-icon">Q</span>基岩版（手机/Win10版）能加入吗？</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="mc-faq-a">
+          目前服务器核心为 Java 版 Paper，暂未开放 Geyser 跨版本，基岩版玩家暂时无法直接加入。后续会考虑开放基岩版接入，敬请关注群通知。
+        </div>
+      </div>
+
+      <div class="mc-faq-item">
+        <div class="mc-faq-q">
+          <span style="display:flex;align-items:center;gap:12px;"><span class="q-icon">Q</span>需要白名单吗？怎么获取？</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="mc-faq-a">
+          服务器无需白名单，所有人均可直接进入。进入后按提示 /register 注册密码即可正常游玩。若遇到无法注册的情况，请联系管理员。
+        </div>
+      </div>
+
+      <div class="mc-faq-item">
+        <div class="mc-faq-q">
+          <span style="display:flex;align-items:center;gap:12px;"><span class="q-icon">Q</span>本业服务器信息来源</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="mc-faq-a">
+          本服务器页面消息引用于itxiaohui.top的MC服务器页面，原官方网站：mc.itxiaohui.top，授权使用，请勿搬运。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 服务器规则 -->
+<section class="mc-section">
+  <div class="mc-container">
+    <h2 class="mc-section-title">服务器规则</h2>
+    <p class="mc-section-subtitle">请所有玩家共同遵守，违者将被处罚</p>
+
+    <div class="mc-rules-grid">
+      <div class="mc-rule-card">
+        <div class="mc-rule-icon ok">✅</div>
+        <div><div class="mc-rule-title">友好交流</div><div class="mc-rule-desc">尊重每一位玩家，不辱骂、不歧视、不人身攻击</div></div>
+      </div>
+      <div class="mc-rule-card">
+        <div class="mc-rule-icon no">🚫</div>
+        <div><div class="mc-rule-title">禁止破坏</div><div class="mc-rule-desc">严禁恶意破坏他人建筑、偷窃他人物品</div></div>
+      </div>
+      <div class="mc-rule-card">
+        <div class="mc-rule-icon no">🚫</div>
+        <div><div class="mc-rule-title">禁止外挂</div><div class="mc-rule-desc">禁止使用任何作弊客户端、X-ray、自动挖矿等</div></div>
+      </div>
+      <div class="mc-rule-card">
+        <div class="mc-rule-icon ok">✅</div>
+        <div><div class="mc-rule-title">合理 PVP</div><div class="mc-rule-desc">PVP 需双方同意，禁止在保护区恶意 PK</div></div>
+      </div>
+      <div class="mc-rule-card">
+        <div class="mc-rule-icon ok">✅</div>
+        <div><div class="mc-rule-title">保护建筑</div><div class="mc-rule-desc">请使用领地插件圈地保护自己的建筑和箱子</div></div>
+      </div>
+      <div class="mc-rule-card">
+        <div class="mc-rule-icon no">🚫</div>
+        <div><div class="mc-rule-title">拒绝违规</div><div class="mc-rule-desc">不传播违规内容、不恶意刷屏、不做广告</div></div>
+      </div>
+    </div>
+
+    <div class="mc-alert">
+      <span>⚠️</span>
+      <span>违反规则将视情节严重处以警告、临时封禁、永久封禁。希望大家共同维护一个良好的游戏环境！</span>
+    </div>
+  </div>
+</section>
+
+<!-- 联系我们 -->
+<section class="mc-section">
+  <div class="mc-container">
+    <h2 class="mc-section-title">联系我们</h2>
+    <p class="mc-section-subtitle">遇到问题或想联系管理员，通过以下方式</p>
+
+    <div class="mc-contact-grid">
+      <a href="contact.html" class="mc-contact-card">
+        <div class="mc-contact-icon qq">🐧</div>
+        <div class="mc-contact-title">QQ 交流群</div>
+        <div class="mc-contact-desc">加入玩家群一起交流，获取最新公告:1083497833</div>
+      </a>
+      <a href="https://www.bilibili.com" target="_blank" rel="noopener" class="mc-contact-card">
+        <div class="mc-contact-icon bili">📺</div>
+        <div class="mc-contact-title">B站演示视频</div>
+        <div class="mc-contact-desc">服务器宣传视频与实况 https://www.bilibili.com/video/BV1dTMR6vEtC?t=47.9</div>
+      </a>
+      <a href="mailto:q18869858990@qq.com" class="mc-contact-card">
+        <div class="mc-contact-icon mail">📧</div>
+        <div class="mc-contact-title">邮箱反馈</div>
+        <div class="mc-contact-desc">yuying@itxiaohui.top</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer（复用站点） -->
+<footer class="footer" style="background:transparent;border-top:1px solid rgba(255,255,255,.4);backdrop-filter:blur(10px);">
+  <div class="container" style="padding:30px 0;text-align:center;color:var(--text-sub);font-size:14px;">
+    <p>© 2026 ITlaozai py 小慧博客 MC 服务器 · 期待你的加入 </p>
+    <p style="margin-top:8px;">Powered by mc.itxiaohui.top | ITxiaohui</p>
+  </div>
+</footer>
+
+<button class="mc-back-top" id="mcBackTop" title="返回顶部">↑</button>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/mcserver.js"></script>
+</body>
+</html>

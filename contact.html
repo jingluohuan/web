@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>联系我 - 牢仔科技</title>
+<link rel="icon" href="assets/icon/icon.png" type="image/png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-solid" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">ITlaozai<span></span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="download.html">下载</a></li>
+      <li><a href="seewo.html">希沃</a></li>
+      <li><a href="about.html">关于</a></li>
+      <li><a href="contact.html" class="active">联系</a></li>
+      <li><a href="mc.html">MC服务器</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" title="切换主题"><span class="theme-icon">🌙</span></button>
+      <button id="rssBtn" class="icon-btn" title="RSS订阅">📡</button>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container"><h1>联系我</h1><p>欢迎交流技术、合作或留言</p></div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="contact-info">
+        <h2>保持联系 ✉️</h2>
+        <p>无论是技术交流、合作邀约还是意见反馈，都欢迎通过以下方式联系我。我会尽快回复！</p>
+        <div class="contact-items">
+          <div class="contact-item"><a href="mailto:q18869858990@qq.com" class="contact-item" style="text-decoration:none;color:inherit"><div class="ci-icon">📧</div><div><h4>Email</h4><p>q18869858990@qq.com</p></div></a></div>
+          <div class="contact-item"><a href="https://github.com/jingluohuan" target="_blank" rel="noopener" class="contact-item" style="text-decoration:none;color:inherit"><div class="ci-icon">🐙</div><div><h4>GitHub</h4><p>github.com/jingluohuan</p></div></a></div>
+          <div class="contact-item"><div class="ci-icon">🐧</div><div><h4>QQ</h4><p>3890139710</p></div></div>
+          <div class="contact-item"><div class="ci-icon">📍</div><div><h4>所在地</h4><p>中国 · 云南</p></div></div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <h3>给我留言</h3>
+        <div class="form-group"><label>姓名</label><input type="text" class="form-input" required placeholder="你的名字"></div>
+        <div class="form-group"><label>邮箱</label><input type="email" class="form-input" required placeholder="your@email.com(正常主流邮箱)"></div>
+        <div class="form-group"><label>主题</label><input type="text" class="form-input" placeholder="消息主题"></div>
+        <div class="form-group"><label>消息内容</label><textarea rows="6" class="form-input" required placeholder="写下你想说的话..."></textarea></div>
+        <button type="submit" class="btn btn-primary btn-full">发送消息</button>
+        <div class="form-success" id="formSuccess" style="display:none">✅ 消息已发送，感谢你的留言！</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h3 class="logo">ITlaozai<span></span></h3><p>一个专注于技术分享的个人博客</p></div>
+      <div><h4>导航</h4><a href="index.html">首页</a><a href="blog.html">博客</a><a href="about.html">关于</a><a href="contact.html">联系</a></div>
+      <div><h4>社交</h4><a href="https://github.com/jingluohuan" target="_blank" rel="noopener">GitHub</a><a href="contact.html">QQ</a><a href="mailto:q18869858990@qq.com">Email</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 牢仔科技 · ITlaozai</p></div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('formSuccess').style.display = 'block';
+    e.target.reset();
+    setTimeout(() => document.getElementById('formSuccess').style.display = 'none', 4000);
+  });
+</script>
+</body>
+</html>

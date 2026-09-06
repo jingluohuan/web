@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>资源下载 - 牢仔科技</title>
+<meta name="description" content="免费分享开发工具、源码、模板、电子书等优质技术资源">
+<link rel="icon" href="assets/icon/icon.png" type="image/png">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/download.css">
+<link rel="alternate" type="application/rss+xml" title="TechBlog RSS" href="#" id="rss-link">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-solid" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">ITlaozai<span></span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="download.html" class="active">下载</a></li>
+      <li><a href="seewo.html">希沃</a></li>
+      <li><a href="about.html">关于</a></li>
+      <li><a href="contact.html">联系</a></li>
+      <li><a href="mc.html">MC服务器</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" title="切换主题"><span class="theme-icon">🌙</span></button>
+      <button id="rssBtn" class="icon-btn" title="RSS订阅">📡</button>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Banner -->
+<section class="download-hero">
+  <div class="container">
+    <div class="download-hero-content">
+      <h1>📦 资源下载中心</h1>
+      <p>精选开发工具、源码模板、学习资料、实用软件，免费下载</p>
+      <div class="download-stats">
+        <div class="stat-item">
+          <div class="stat-num" id="totalCount">0</div>
+          <div class="stat-label">资源总数</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" id="totalDownloads">0</div>
+          <div class="stat-label">累计下载</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" id="totalCategories">0</div>
+          <div class="stat-label">资源分类</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Filter Bar -->
+<section class="filter-section">
+  <div class="container">
+    <div class="filter-bar">
+      <div class="category-tabs" id="categoryTabs"></div>
+      <div class="sort-box">
+        <select id="sortSelect">
+          <option value="newest">最新上传</option>
+          <option value="hot">最多下载</option>
+          <option value="name">按名称</option>
+          <option value="size">按大小</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Download Grid -->
+<section class="section">
+  <div class="container">
+    <!-- 特色合集 -->
+    <div class="featured-collections">
+      <a href="seewo.html" class="featured-card featured-seewo">
+        <div class="featured-cover" style="background-image:url('assets/png/seewo-cover.png');background-size:cover;background-position:center">
+          <div class="featured-cover-bg"></div>
+        </div>
+        <div class="featured-body">
+          <div class="featured-tag">📌 官方合集</div>
+          <h3>希沃（Seewo）教学软件合集</h3>
+          <p>35+ 款希沃官方原版教学软件，点击进入查看分类详情，一键跳转希沃官网下载最新版本。</p>
+          <div class="featured-meta">
+            <span>🖥 Windows</span><span>📦 35 款</span><span>✅ 官方原版</span>
+          </div>
+          <div class="featured-btn">查看合集 →</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="download-grid" id="downloadGrid"></div>
+    <div class="empty-state" id="emptyState" style="display:none">
+      <div class="empty-icon">📭</div>
+      <h3>该分类下暂无资源</h3>
+      <p>切换其他分类看看吧～</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">ITlaozai<span></span></div>
+        <p>记录代码、思考与生活 · 分享技术成长之路</p>
+      </div>
+      <div class="footer-links">
+        <h4>快速导航</h4>
+        <a href="index.html">首页</a>
+        <a href="blog.html">博客</a>
+        <a href="download.html">下载</a><a href="seewo.html">希沃</a>
+        <a href="about.html">关于</a>
+      </div>
+      <div class="footer-links">
+        <h4>关注我</h4>
+        <a href="https://github.com/jingluohuan" target="_blank" rel="noopener">GitHub</a>
+        <a href="#">掘金</a>
+        <a href="contact.html">QQ</a>
+        <a href="contact.html">联系我</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 牢仔科技 · ITlaozai<a href="#" id="rssLinkFooter">RSS 订阅</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/download.js"></script>
+</body>
+</html>
+<!--08167994962573747210090512--><!--18395912992395614730090514--><!--18978038072573747210090514-->

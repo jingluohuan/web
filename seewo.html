@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>希沃教学软件合集 | 资源下载中心</title>
+  <meta name="description" content="希沃官方教学软件一站式下载：希沃白板、AI教学空间、视频展台、课堂助手、易启学等35款官方正版软件。">
+  <link rel="icon" href="assets/icon/icon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ========== Seewo 页专属样式 ========== */
+    :root{
+      --seewo-blue:#00A0E9;
+      --seewo-dark:#007BC7;
+      --seewo-light:#E5F5FD;
+    }
+    [data-theme="dark"]{ --seewo-light:#0d2840; }
+
+    /* 顶部 Hero */
+    .seewo-hero{
+      background: linear-gradient(135deg,#00A0E9 0%,#007BC7 60%,#005799 100%);
+      color:#fff; padding:70px 24px 56px; text-align:center;
+      position:relative; overflow:hidden;
+    }
+    .seewo-hero::before{
+      content:""; position:absolute; inset:0;
+      background:
+        radial-gradient(circle at 20% 30%,rgba(255,255,255,.15),transparent 40%),
+        radial-gradient(circle at 80% 70%,rgba(255,255,255,.1),transparent 45%);
+      pointer-events:none;
+    }
+    .seewo-hero-inner{ position:relative; z-index:2; max-width:1100px; margin:0 auto; }
+    .seewo-hero-logo{
+      width:90px; height:90px; background:#fff; border-radius:22px;
+      display:inline-flex; align-items:center; justify-content:center;
+      font-size:42px; font-weight:800; color:var(--seewo-blue);
+      box-shadow:0 10px 30px rgba(0,0,0,.2); margin-bottom:18px;
+      letter-spacing:-2px;
+    }
+    .seewo-hero h1{ font-size:2.4rem; margin:0 0 10px; font-weight:700; }
+    .seewo-hero .subtitle{ font-size:1.05rem; opacity:.92; margin-bottom:22px; }
+    .seewo-badges{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+    .seewo-badges span{
+      background:rgba(255,255,255,.2); backdrop-filter:blur(6px);
+      padding:6px 14px; border-radius:20px; font-size:.85rem; border:1px solid rgba(255,255,255,.3);
+    }
+
+    /* 统计条 */
+    .seewo-stats{
+      max-width:1100px; margin:-30px auto 0; padding:0 24px;
+      display:grid; grid-template-columns:repeat(4,1fr); gap:16px; position:relative; z-index:3;
+    }
+    .seewo-stat{
+      background:var(--card-bg); border-radius:14px; padding:22px 16px;
+      text-align:center; box-shadow:0 4px 20px var(--shadow);
+      border:1px solid var(--border);
+    }
+    .seewo-stat .num{
+      font-size:2rem; font-weight:800; color:var(--seewo-blue); line-height:1;
+    }
+    .seewo-stat .lbl{ font-size:.88rem; color:var(--text-secondary); margin-top:6px; }
+
+    /* 板块标题 */
+    .seewo-section{ max-width:1200px; margin:48px auto 0; padding:0 24px; }
+    .seewo-section-title{
+      display:flex; align-items:center; gap:12px; margin-bottom:20px;
+      padding-bottom:12px; border-bottom:2px solid var(--border);
+    }
+    .seewo-section-title .icon{
+      width:40px; height:40px; background:linear-gradient(135deg,var(--seewo-blue),var(--seewo-dark));
+      color:#fff; border-radius:10px; display:flex; align-items:center; justify-content:center;
+      font-size:20px;
+    }
+    .seewo-section-title h2{ margin:0; font-size:1.35rem; }
+    .seewo-section-title .count{
+      margin-left:auto; font-size:.85rem; color:var(--text-secondary);
+      background:var(--bg-secondary); padding:4px 12px; border-radius:12px;
+    }
+
+    /* 软件网格 */
+    .seewo-grid{
+      display:grid; gap:16px;
+      grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    }
+    .seewo-card{
+      background:var(--card-bg); border:1px solid var(--border); border-radius:14px;
+      padding:20px; display:flex; gap:14px; align-items:flex-start;
+      text-decoration:none; color:var(--text-primary);
+      transition:all .25s ease; position:relative; overflow:hidden;
+    }
+    .seewo-card:hover{
+      transform:translateY(-4px); box-shadow:0 10px 30px var(--shadow);
+      border-color:var(--seewo-blue);
+    }
+    .seewo-card:hover .card-btn{ background:var(--seewo-blue); color:#fff; transform:translateX(4px); }
+    .seewo-card-icon{
+      flex-shrink:0; width:60px; height:60px; border-radius:14px;
+      background:var(--seewo-light); display:flex; align-items:center; justify-content:center;
+      overflow:hidden; font-size:28px;
+    }
+    .seewo-card-icon img{ width:100%; height:100%; object-fit:contain; }
+    .seewo-card-body{ flex:1; min-width:0; }
+    .seewo-card-name{
+      font-size:1rem; font-weight:600; margin:0 0 4px;
+      display:flex; align-items:center; gap:6px; flex-wrap:wrap;
+    }
+    .seewo-card-tag{
+      font-size:.68rem; padding:2px 6px; border-radius:4px; font-weight:500;
+    }
+    .seewo-card-tag.hot{ background:#fff1e6; color:#ff6b00; }
+    .seewo-card-tag.new{ background:#e6f7ed; color:#00a870; }
+    .seewo-card-tag.free{ background:var(--seewo-light); color:var(--seewo-blue); }
+    .seewo-card-desc{ font-size:.82rem; color:var(--text-secondary); margin:0 0 10px; line-height:1.5;
+      display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    .seewo-card-meta{
+      display:flex; gap:10px; font-size:.75rem; color:var(--text-secondary); margin-bottom:10px;
+    }
+    .card-btn{
+      display:inline-flex; align-items:center; gap:4px;
+      padding:6px 14px; border-radius:8px; background:var(--bg-secondary);
+      color:var(--text-primary); font-size:.82rem; transition:all .25s;
+    }
+
+    /* 官方提示 */
+    .seewo-notice{
+      max-width:1200px; margin:30px auto 0; padding:16px 22px;
+      background:linear-gradient(135deg,var(--seewo-light),var(--bg-secondary));
+      border-left:4px solid var(--seewo-blue); border-radius:10px;
+      font-size:.9rem; color:var(--text-primary);
+    }
+    .seewo-notice strong{ color:var(--seewo-dark); }
+
+    @media (max-width:640px){
+      .seewo-hero{ padding:50px 18px 40px; }
+      .seewo-hero h1{ font-size:1.7rem; }
+      .seewo-stats{ grid-template-columns:repeat(2,1fr); gap:10px; }
+      .seewo-grid{ grid-template-columns:1fr; }
+      .seewo-card{ padding:16px; }
+      .seewo-card-icon{ width:52px; height:52px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ============ 顶部导航栏：与首页/博客页完全一致 ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">&lt;/&gt;</span>
+        <span class="logo-text">ITlaozai</span>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html">首页</a>
+        <a href="blog.html">博客</a>
+        <a href="download.html">下载</a>
+        <a href="seewo.html" class="active">希沃</a>
+        <a href="about.html">关于</a>
+        <a href="contact.html">联系</a>
+        <a href="mc.html">MC服务器</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" title="切换主题">🌙</button>
+        <button class="rss-btn" id="rssBtn" title="RSS订阅">📡</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="seewo-hero">
+      <div class="seewo-hero-inner">
+        <div class="seewo-hero-logo">希沃</div>
+        <h1>希沃教学软件合集</h1>
+        <p class="subtitle">Seewo 官方教学软件一站式下载 · 智能教学 轻松备课</p>
+        <div class="seewo-badges">
+          <span>✅ 官方原版</span>
+          <span>🆓 免费使用</span>
+          <span>🖥️ Windows</span>
+          <span>🎓 教学专用</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 统计条 -->
+    <div class="seewo-stats">
+      <div class="seewo-stat"><div class="num" data-target="35">0</div><div class="lbl">软件总数</div></div>
+      <div class="seewo-stat"><div class="num" data-target="8">0</div><div class="lbl">教学应用</div></div>
+      <div class="seewo-stat"><div class="num" data-target="12">0</div><div class="lbl">辅助工具</div></div>
+      <div class="seewo-stat"><div class="num" data-target="100" data-suffix="%">0</div><div class="lbl">官方免费</div></div>
+    </div>
+
+    <!-- 官方提示 -->
+    <div class="seewo-notice">
+      ℹ️ 所有软件图标均来自 <strong>seewo.com</strong> 官方产品页，点击卡片将跳转到希沃官方页面下载最新版本。客服热线：<strong>400-186-2505</strong>
+    </div>
+
+    <!-- 教学应用 -->
+    <section class="seewo-section" id="teach">
+      <div class="seewo-section-title">
+        <div class="icon">📚</div>
+        <h2>教学应用</h2>
+        <span class="count">共 8 款</span>
+      </div>
+      <div class="seewo-grid">
+        <a class="seewo-card" href="https://easinote.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/xw-baiban.png" alt="希沃白板" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'📝'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃白板 <span class="seewo-card-tag hot">🔥 HOT</span></h3>
+            <p class="seewo-card-desc">互动教学平台，为老师提供课件制作、互动授课、在线课堂等功能</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 v5.x</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/product/EasiNote3" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/en3.png" alt="希沃白板3" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'📖'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃白板3</h3>
+            <p class="seewo-card-desc">经典版互动教学平台，适合旧机型与习惯传统界面的教师</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 v3.x</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/product/EasiNote3c" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/light-whiteboard.png" alt="希沃轻白板" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'✏️'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃轻白板</h3>
+            <p class="seewo-card-desc">轻量化白板工具，启动快、资源占用少，适合日常快速板书</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 v1.x</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://easinote.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/ai-space.png" alt="希沃AI教学空间" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🤖'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃AI教学空间 <span class="seewo-card-tag new">✨ NEW</span></h3>
+            <p class="seewo-card-desc">AI 辅助备课授课，智能生成课件、作业批改、学情分析</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 新版</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://pinco.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/pinkee.png" alt="希沃品课" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🏫'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃品课</h3>
+            <p class="seewo-card-desc">小组互动教学，支持分组研讨、多屏互动、课堂互动</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 客户端</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://class.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/yiketang.png" alt="希沃易课堂" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🎒'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃易课堂</h3>
+            <p class="seewo-card-desc">智慧课堂解决方案，覆盖课前、课中、课后全流程</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 客户端</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://study.seewoedu.cn/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/xueyuan.png" alt="希沃学苑" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🎓'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">幼教助手</h3>
+            <p class="seewo-card-desc">幼教专用教学工具，包含丰富的幼儿教学资源库</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 幼教版</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://capsule.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/capsule.png" alt="知识胶囊" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'💊'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">知识胶囊</h3>
+            <p class="seewo-card-desc">轻量录课工具，一键录制微课，分享知识胶囊</p>
+            <div class="seewo-card-meta"><span>🖥️ Win/Mac</span><span>📦 录课</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 课堂互动 -->
+    <section class="seewo-section" id="interact">
+      <div class="seewo-section-title">
+        <div class="icon">🎯</div>
+        <h2>课堂互动</h2>
+        <span class="count">共 7 款</span>
+      </div>
+      <div class="seewo-grid">
+        <a class="seewo-card" href="https://imlizhi-store-https.seewo.com/SeewoYiQiXueTeacher_1.0.13.4013(20241205173754).exe" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/yiqixue-teacher.png" alt="易启学教师端" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'👨‍🏫'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃易启学（教师）</h3>
+            <p class="seewo-card-desc">教师端互动课堂，支持课堂答题、作业分发、学情统计</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 v1.0.13</span></div>
+            <span class="card-btn">下载 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://imlizhi-store-https.seewo.com/SeewoYiQiXueStudent_1.0.13.4013(20241205174334).exe" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/yiqixue-student.png" alt="易启学学生端" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🧑‍🎓'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃易启学（学生）</h3>
+            <p class="seewo-card-desc">学生端互动课堂，课堂答题、提交作业、接收教师互动</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 v1.0.13</span></div>
+            <span class="card-btn">下载 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/product/EasiCamera" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/video-camera.png" alt="视频展台" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'📹'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃视频展台</h3>
+            <p class="seewo-card-desc">配合希沃展台使用，实时拍摄作业、实验过程，批注讲解</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 展台软件</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/class-helper.png" alt="课堂助手" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'💡'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃课堂助手</h3>
+            <p class="seewo-card-desc">课堂管理辅助工具，黑屏肃静、远程控制、学生监控</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 课堂管理</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://www.seewo.com/product/detail/lb" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/remote.png" alt="远程互动助手" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'📡'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">远程互动助手</h3>
+            <p class="seewo-card-desc">支持跨班级、跨校区远程教学互动，多校同上一堂课</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 远程互动</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/chuanshiping.png" alt="希象传屏" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'📱'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希象传屏</h3>
+            <p class="seewo-card-desc">手机、平板、电脑无线投屏到大屏，跨设备分享内容</p>
+            <div class="seewo-card-meta"><span>🖥️ 跨平台</span><span>📦 投屏</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/fankui.png" alt="反馈器助手" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🗳️'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">反馈器助手</h3>
+            <p class="seewo-card-desc">配合学生反馈器使用，实时收集答题结果、统计正确率</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 答题器</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 辅助工具 -->
+    <section class="seewo-section" id="tools">
+      <div class="seewo-section-title">
+        <div class="icon">🛠️</div>
+        <h2>辅助工具</h2>
+        <span class="count">共 12 款</span>
+      </div>
+      <div class="seewo-grid">
+        <a class="seewo-card" href="https://www.seewo.com/product/strategy/zhhb" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/guanjia.png" alt="希沃管家" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🛡️'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃管家</h3>
+            <p class="seewo-card-desc">设备管理与保护工具，系统还原、软件管控、硬盘保护</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 系统工具</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><span style="font-size:30px">💻</span></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃电脑助手</h3>
+            <p class="seewo-card-desc">电脑优化清理工具，系统加速、垃圾清理、软件管理</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 系统优化</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/download/file?code=seewoFileTransfer" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/kuaichuan.png" alt="希沃快传" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'⚡'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃快传</h3>
+            <p class="seewo-card-desc">局域网高速文件传输，无需数据线，电脑手机互传文件</p>
+            <div class="seewo-card-meta"><span>🖥️ 跨平台</span><span>📦 文件传输</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://d.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/yundesk.png" alt="希沃云桌面" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'☁️'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃云桌面</h3>
+            <p class="seewo-card-desc">云端桌面方案，教室机房统一管理，开机即上课</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 云桌面</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/daobo.png" alt="导播助手" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🎬'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃导播助手</h3>
+            <p class="seewo-card-desc">多机位导播工具，支持录课、直播、多画面切换</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 直播录课</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/product/JJS" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/jianjishi.png" alt="剪辑师" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🎞️'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">剪辑师</h3>
+            <p class="seewo-card-desc">免费视频剪辑软件，专为教学设计，操作简单易上手</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 视频剪辑</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/ppt-tool.png" alt="PPT小工具" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'📊'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃PPT小工具</h3>
+            <p class="seewo-card-desc">PPT 授课增强插件，课堂互动、白板批注、快速调用</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 PPT插件</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/browser.png" alt="希沃浏览器" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🌐'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃浏览器</h3>
+            <p class="seewo-card-desc">教学专用浏览器，屏蔽广告、教学资源快速访问</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 浏览器</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/light-record.png" alt="轻录播" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🎥'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">轻录播</h3>
+            <p class="seewo-card-desc">轻量化录播解决方案，一键录制课堂、自动生成课件</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 录播</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/seewo-desktop.png" alt="希沃桌面" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🖼️'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃桌面</h3>
+            <p class="seewo-card-desc">教学专用桌面环境，大图标、快捷教学入口、免干扰模式</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 桌面</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://study.seewoedu.cn/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/xueyuan.png" alt="希沃学苑" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'📚'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">希沃学苑</h3>
+            <p class="seewo-card-desc">教师成长学习平台，海量教学课程、培训资源、名师讲座</p>
+            <div class="seewo-card-meta"><span>🌐 Web</span><span>📦 在线学习</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/province-plugin.png" alt="省平台登录插件" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'🔌'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">省平台登录插件</h3>
+            <p class="seewo-card-desc">省级教育资源平台登录插件，快速对接省市教育云平台</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 插件</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 驱动插件 -->
+    <section class="seewo-section" id="drivers">
+      <div class="seewo-section-title">
+        <div class="icon">⚙️</div>
+        <h2>驱动与配套工具</h2>
+        <span class="count">共 8 款</span>
+      </div>
+      <div class="seewo-grid">
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><span style="font-size:28px">✍️</span></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">手写板驱动</h3>
+            <p class="seewo-card-desc">希沃手写板/数位板官方驱动程序，支持原笔迹书写</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 驱动</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><img src="assets/img/seewo/whiteboard-suite.png" alt="电子白板全家桶" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'📟'}))"></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">电子白板全家桶</h3>
+            <p class="seewo-card-desc">希沃交互智能平板官方驱动与配套工具整合包</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 驱动整合包</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><span style="font-size:28px">🔑</span></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">USB锁秘钥程序</h3>
+            <p class="seewo-card-desc">设备USB锁授权工具，管理USB接口使用权限</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 安全工具</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><span style="font-size:28px">💾</span></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">一键还原秘钥</h3>
+            <p class="seewo-card-desc">系统还原秘钥工具，配合希沃管家使用</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 还原工具</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><span style="font-size:28px">🖐️</span></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">触摸框测试程序</h3>
+            <p class="seewo-card-desc">大屏触摸框检测工具，排查触摸失灵、偏移问题</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 检测工具</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><span style="font-size:28px">🔓</span></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">AGC解锁工具</h3>
+            <p class="seewo-card-desc">设备AGC锁解锁工具，用于特殊授权场景</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 解锁工具</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><span style="font-size:28px">⏪</span></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">一键还原工具</h3>
+            <p class="seewo-card-desc">系统一键还原工具，快速恢复系统到初始状态</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 系统恢复</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+        <a class="seewo-card" href="https://e.seewo.com/" target="_blank" rel="noopener">
+          <div class="seewo-card-icon"><span style="font-size:28px">⚙️</span></div>
+          <div class="seewo-card-body">
+            <h3 class="seewo-card-name">TouchService</h3>
+            <p class="seewo-card-desc">触摸服务核心组件，保证大屏多点触控功能正常运行</p>
+            <div class="seewo-card-meta"><span>🖥️ Win</span><span>📦 服务组件</span></div>
+            <span class="card-btn">前往官网 →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-mark">&lt;/&gt;</span><span class="logo-text">ITlaozai</span></div>
+          <p>分享技术 · 记录成长 · 探索无限可能</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>导航</h4>
+            <a href="index.html">首页</a><a href="blog.html">博客</a>
+            <a href="download.html">下载</a><a href="about.html">关于</a>
+          </div>
+          <div class="footer-col">
+            <h4>资源</h4>
+            <a href="seewo.html">希沃软件</a><a href="https://www.seewo.com/" target="_blank" rel="noopener">希沃官网</a>
+            <a href="contact.html">联系我</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 牢仔科技 · ITlaozai<a href="https://www.seewo.com" target="_blank" rel="noopener">seewo.com</a> 图标版权归希沃所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // 数字滚动动画
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.seewo-stat .num').forEach(el => {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        let current = 0;
+        const step = Math.max(1, Math.ceil(target / 40));
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = current + suffix;
+        }, 30);
+      });
+      // 卡片点击 toast 提示
+      document.querySelectorAll('.seewo-card').forEach(card => {
+        card.addEventListener('click', () => {
+          showToast && showToast('正在跳转到希沃官网下载...');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

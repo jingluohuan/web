@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文章详情 - 牢仔科技</title>
+<link rel="icon" href="assets/icon/icon.png" type="image/png">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hljs-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hljs-dark" disabled>
+</head>
+<body>
+<nav class="navbar navbar-solid" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">ITlaozai<span></span></a>
+        <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="download.html">下载</a></li>
+      <li><a href="seewo.html">希沃</a></li>
+      <li><a href="mc.html">MC服务器</a></li>
+      <li><a href="about.html">关于</a></li>
+      <li><a href="contact.html">联系</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" title="切换主题"><span class="theme-icon">🌙</span></button>
+      <button id="rssBtn" class="icon-btn" title="RSS订阅">📡</button>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </div>
+</nav>
+
+<article class="article-container" id="articleContainer">
+  <div class="loading-spinner" id="loadingSpinner">
+    <div class="spinner"></div><p>文章加载中...</p>
+  </div>
+  <div id="articleContent" style="display:none"></div>
+</article>
+
+<section class="section" id="commentSection" style="display:none">
+  <div class="container">
+    <div class="comment-wrapper">
+      <h2>💬 评论区(暂不可用)</h2>
+      <div class="comment-form">
+        <div class="form-row">
+          <input type="text" id="commentName" placeholder="你的昵称" class="form-input">
+          <input type="email" id="commentEmail" placeholder="邮箱（可选）" class="form-input">
+        </div>
+        <textarea id="commentText" placeholder="写下你的想法..." rows="4" class="form-input"></textarea>
+        <button class="btn btn-primary" id="submitComment">发表评论</button>
+      </div>
+      <div class="comment-list" id="commentList"></div>
+      <div id="giscusContainer" style="display:none"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h3 class="logo">OTscgYdn<span></span></h3><p>一个专注于技术分享的个人博客</p></div>
+      <div><h4>导航</h4><a href="index.html">首页</a><a href="blog.html">博客</a><a href="about.html">关于</a><a href="contact.html">联系</a></div>
+      <div><h4>社交</h4><a href="https://github.com/jingluohuan" target="_blank" rel="noopener">GitHub</a><a href="contact.html">QQ</a><a href="mailto:q18869858990@qq.com">Email</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 牢仔科技 · ITlaozai</p></div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>document.addEventListener('DOMContentLoaded', () => { initArticle(); });</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>牢仔科技 - 个人技术博客</title>
+<meta name="description" content="分享前端、后端、DevOps 等技术经验与思考">
+<link rel="icon" href="assets/icon/icon.png" type="image/png">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="alternate" type="application/rss+xml" title="ITLaozai RSS" href="#" id="rss-link">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">ITlaozai<span></span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="active">首页</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="download.html">下载</a><li>
+      <li><a href="seewo.html">希沃</a></li>
+      <li><a href="about.html">关于</a></li>
+      <li><a href="contact.html">联系</a></li>
+      <li><a href="mc.html">MC服务器</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" title="切换主题">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <button id="rssBtn" class="icon-btn" title="RSS订阅">
+        📡
+      </button>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <button class="bg-switch-btn" id="bgSwitch" title="换一张背景图">🔄 换一张</button>
+  <div class="hero-content">
+    <h1 class="hero-title">欢迎，牢仔科技<span class="cursor">_</span></h1>
+    <p class="hero-subtitle" id="heroSubtitle"><span class="typed-text"></span><span class="type-cursor">|</span></p>
+    <div class="hero-actions">
+      <a href="blog.html" class="btn btn-primary">阅读文章 →</a>
+      <a href="download.html" class="btn btn-outline">下载站</a>
+      <a href="mc.html" class="btn btn-outline">MC服务器</a>
+    </div>
+  </div>
+  <div class="scroll-hint">↓</div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>最新文章</h2>
+      <a href="blog.html" class="view-all">查看全部 →</a>
+    </div>
+    <div class="posts-grid" id="latestPosts"></div>
+    <div class="load-more-wrap">
+      <button class="btn btn-outline" id="shufflePostsBtn">🔀 换一批</button>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header"><h2>技术分类</h2></div>
+    <div class="categories-grid">
+      <a href="blog.html?cat=frontend" class="category-card" style="--cat-color:#3b82f6">
+        <div class="cat-icon">🎨</div><h3>前端开发</h3><p>React/Vue/TypeScript/工程化</p>
+      </a>
+      <a href="blog.html?cat=backend" class="category-card" style="--cat-color:#10b981">
+        <div class="cat-icon">⚙️</div><h3>后端技术</h3><p>Node.js/Python/数据库/架构</p>
+      </a>
+      <a href="blog.html?cat=devops" class="category-card" style="--cat-color:#f59e0b">
+        <div class="cat-icon">🚀</div><h3>DevOps</h3><p>Docker/K8s/CI/CD/云原生</p>
+      </a>
+      <a href="blog.html?cat=life" class="category-card" style="--cat-color:#ec4899">
+        <div class="cat-icon">☕</div><h3>随笔思考</h3><p>程序员成长/阅读/生活记录</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3 class="logo">ITlaozai<span></span></h3>
+        <p>一个专注于技术分享的个人博客</p>
+      </div>
+      <div>
+        <h4>导航</h4>
+        <a href="index.html">首页</a><a href="blog.html">博客</a>
+        <a href="about.html">关于</a><a href="contact.html">联系</a>
+      </div>
+      <div>
+        <h4>社交</h4>
+        <a href="https://github.com/jingluohuan" target="_blank" rel="noopener">GitHub</a><a href="contact.html">QQ</a><a href="mailto:q18869858990@qq.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 牢仔科技 · ITlaozai</p>
+      <p>今天你快乐吗 · 一定要好好爱自己~</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => { initHome(); });
+</script>
+</body>
+</html>
+<!--33518080572395614730090321--><!--28567456532395614730090511--><!--28667297082395614730090511--><!--15619722942395614730090514-->
