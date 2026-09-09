@@ -1,4 +1,4 @@
-# 牢仔科技i · 个人技术博客
+# 牢仔科技 · 个人技术博客
 
 一个简洁现代、功能完整的个人技术博客网站，零框架依赖、纯静态部署。
 
@@ -15,24 +15,6 @@
 - 📱 **响应式设计**：完美适配桌面/平板/手机
 - 🔌 **CMS 预留接口**：可接入 Ghost / Strapi 等 Headless CMS
 
-## 🚀 快速开始
-
-### 本地运行
-
-由于浏览器安全限制（CORS），直接打开 HTML 可能无法加载 Markdown 文件，建议启动本地服务器：
-
-```bash
-# 方式一：Python
-python -m http.server 8000
-
-# 方式二：Node.js
-npx serve .
-
-# 方式三：VS Code Live Server 插件
-```
-
-然后浏览器访问 `http://localhost:8000`
-
 ### 部署
 
 直接将整个项目目录上传到任意静态托管平台：
@@ -40,7 +22,7 @@ npx serve .
 - Vercel / Netlify
 - 腾讯云 / 阿里云 对象存储
 - Nginx 静态目录
-
+- Cloudflare Pages
 ## 📝 写文章
 
 1. 将 Markdown 文件放入 `assets/posts/` 目录
