@@ -8,7 +8,7 @@ const CONFIG = {
   postsDir: 'assets/posts/',
   // 打字机副标题文案（循环打字/删除）
   typewriterPhrases: [
-    '牢仔科技官方的网站~',
+    '牢仔科技官方的网站喵~',
     '分享前端 Python Minceraft 技术',
     '一只初三猫猫的成长笔记喵~',
     '你也可以加入牢仔科技的喵~',
