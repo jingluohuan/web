@@ -1,4 +1,4 @@
-/* ========== TechBlog 主脚本 ========== */
+
 // ========== 配置 ==========
 const CONFIG = {
   // 背景图 API（dmoe.cc）
@@ -8,11 +8,11 @@ const CONFIG = {
   postsDir: 'assets/posts/',
   // 打字机副标题文案（循环打字/删除）
   typewriterPhrases: [
-    '记录代码、思考与生活',
-    '分享前端、后端与 DevOps 技术',
-    '一个程序员的成长笔记',
-    '记录每一次调试与重构',
-    '用代码创造有趣的东西'
+    '牢仔科技官方的网站~',
+    '分享前端 Python Minceraft 技术',
+    '一只初三猫猫的成长笔记喵~',
+    '你也可以加入牢仔科技的喵~‘,
+    '用代码创造有趣的东西喵~'
   ],
   typeSpeed: 120,
   deleteSpeed: 60,
@@ -35,8 +35,8 @@ const CONFIG = {
       theme: 'preferred_color_scheme'
     }
   },
-  blogName: 'TechBlog',
-  blogDesc: '记录代码、思考与生活 · 分享技术成长之路',
+  blogName: 'ITlaozai',
+  blogDesc: '一只初三猫猫的博客技术小站',
   siteUrl: window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/'),
   useCache: true,
   cacheTtl: 5 * 60 * 1000
