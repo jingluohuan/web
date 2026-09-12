@@ -12,7 +12,7 @@ const CONFIG = {
     '分享前端 Python Minceraft 技术',
     '一只初三猫猫的成长笔记喵~',
     '你也可以加入牢仔科技的喵~‘,
-    '用代码创造有趣的东西喵~'
+    '用代码创造有趣的东西喵~',
   ],
   typeSpeed: 120,
   deleteSpeed: 60,
