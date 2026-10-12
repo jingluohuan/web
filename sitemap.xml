@@ -3,63 +3,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-       <loc>https://itlaozai.de5.net/</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
+       <loc>https://itlaozai.top/</loc>
+       <lastmod>2026-10-12T14:13:01+00:00</lastmod>
        <priority>1.0000</priority>
   </url>
   <url>
-       <loc>https://itlaozai.de5.net/blog</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
+       <loc>https://itlaozai.top/blog</loc>
+       <lastmod>2026-10-12T14:13:01+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://itlaozai.de5.net/download</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
+       <loc>https://itlaozai.top/download</loc>
+       <lastmod>2026-10-12T14:13:01+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://itlaozai.de5.net/seewo</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
+       <loc>https://itlaozai.top/seewo</loc>
+       <lastmod>2026-10-12T14:13:01+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://itlaozai.de5.net/about</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
+       <loc>https://itlaozai.top/about</loc>
+       <lastmod>2026-10-12T14:13:01+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://itlaozai.de5.net/contact</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
+       <loc>https://itlaozai.top/contact</loc>
+       <lastmod>2026-10-12T14:13:01+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://itlaozai.de5.net/mc</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
+       <loc>https://itlaozai.top/mc</loc>
+       <lastmod>2026-10-12T14:13:01+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://itlaozai.de5.net/game</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
+       <loc>https://itlaozai.top/game</loc>
+       <lastmod>2026-10-12T14:13:01+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://itlaozai.de5.net/webmc</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
+       <loc>https://itlaozai.top/webmc</loc>
+       <lastmod>2026-10-12T14:13:01+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://itlaozai.de5.net/mcserver.html</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
-       <priority>0.5120</priority>
-  </url>
-  <url>
-       <loc>https://itlaozai.de5.net/mc1.8.8</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
+       <loc>https://itlaozai.top/mc1.8.8</loc>
+       <lastmod>2026-10-12T14:13:01+00:00</lastmod>
        <priority>0.4096</priority>
   </url>
   <url>
-       <loc>https://itlaozai.de5.net/mc1.8.8wasm</loc>
-       <lastmod>2026-10-10T02:46:03+00:00</lastmod>
+       <loc>https://itlaozai.top/mc1.8.8wasm</loc>
+       <lastmod>2026-10-12T14:13:01+00:00</lastmod>
        <priority>0.4096</priority>
   </url>
 </urlset>
